@@ -5,9 +5,9 @@
       "id": "relationship",
       "name": "关系风险评估（原4.2）",
       "description": "用于梳理关系证据、确认后调用原4.2计算服务。",
-      "release": "4.2.0-alpha-r9",
+      "release": "4.2.0-alpha-r10",
       "status": "acceptance_candidate",
-      "manifest": "models/relationship/4.2.0-alpha-r9/manifest.json"
+      "manifest": "models/relationship/4.2.0-alpha-r10/manifest.json"
     }
   ]
 }
