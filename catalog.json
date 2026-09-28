@@ -8,6 +8,14 @@
       "release": "4.2.0-alpha-r10",
       "status": "acceptance_candidate",
       "manifest": "models/relationship/4.2.0-alpha-r10/manifest.json"
+    },
+    {
+      "id": "writing-observer",
+      "name": "写作旁观者（私人自测）",
+      "description": "引用原文，提供可选择的写作观察方向；不打分、不自动改写。",
+      "release": "0.1.0-r1",
+      "status": "acceptance_candidate",
+      "manifest": "models/writing-observer/0.1.0-r1/manifest.json"
     }
   ]
 }
