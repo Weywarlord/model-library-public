@@ -5,17 +5,17 @@
       "id": "relationship",
       "name": "关系风险评估（原4.2）",
       "description": "用于梳理关系证据、确认后调用原4.2计算服务。",
-      "release": "4.2.0-alpha-r11",
+      "release": "0.1.0-alpha.1",
       "status": "acceptance_candidate",
-      "manifest": "models/relationship/4.2.0-alpha-r11/manifest.json"
+      "manifest": "models/relationship/0.1.0-alpha.1/manifest.json"
     },
     {
       "id": "writing-observer",
       "name": "写作旁观者（私人自测）",
       "description": "引用原文，提供可选择的写作观察方向；不打分、不自动改写。",
-      "release": "0.1.0-r2",
+      "release": "0.1.0-alpha.2",
       "status": "acceptance_candidate",
-      "manifest": "models/writing-observer/0.1.0-r2/manifest.json"
+      "manifest": "models/writing-observer/0.1.0-alpha.2/manifest.json"
     }
   ]
 }

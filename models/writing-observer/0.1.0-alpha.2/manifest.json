@@ -1,0 +1,40 @@
+{
+  "manifest_version": 1,
+  "model_id": "writing-observer",
+  "release": "0.1.0-alpha.2",
+  "model_version": "observer-0.1",
+  "schema_version": "1",
+  "prompt_version": "observer-0.1",
+  "package": {
+    "path": "customer.zip",
+    "sha256": "7b49a89579305fbf36287075769bbe6839e5f0b5e983ed42dca005f8444ccc61"
+  },
+  "requirements": {
+    "python": ">=3.12",
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "capabilities": [
+      "https",
+      "local_files",
+      "python_execution"
+    ]
+  },
+  "authorization": "Payhip product 0GZrg; existing local credential may redeem; no credential in package",
+  "prompt": {
+    "path": "prompt.md",
+    "installed_path": "writing-observer/PROMPT.md",
+    "sha256": "b3da7cbebb7101092356d4465c5d82f501cf1a6bd0c53812956581834dc05492"
+  },
+  "skill": {
+    "path": "skill.md",
+    "installed_path": ".agents/skills/writing-observer/SKILL.md",
+    "sha256": "ccb34c30bb5874df7693afaba5143df1d88ed4f3ba050a73380b309e4d661116"
+  },
+  "instructions": {
+    "path": "start.md",
+    "installed_path": "writing-observer/START.md",
+    "sha256": "e0a8f3137a6bb6ff0ab3a724c45c583cc75a4ca39f02ae19c3cd351a1df09e6b"
+  }
+}
