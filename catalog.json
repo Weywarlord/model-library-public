@@ -3,11 +3,11 @@
   "models": [
     {
       "id": "relationship",
-      "name": "关系风险评估（原4.2）",
-      "description": "用于梳理关系证据、确认后调用原4.2计算服务。",
-      "release": "0.1.0-alpha.1",
+      "name": "关系观察 · 风险分析",
+      "description": "整理变化，核对线索，确认后调用关系模型；风险指数并非已验证的现实概率。",
+      "release": "0.1.0-alpha.2",
       "status": "acceptance_candidate",
-      "manifest": "models/relationship/0.1.0-alpha.1/manifest.json"
+      "manifest": "models/relationship/0.1.0-alpha.2/manifest.json"
     },
     {
       "id": "writing-observer",
