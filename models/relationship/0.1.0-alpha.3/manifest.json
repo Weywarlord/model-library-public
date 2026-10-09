@@ -1,0 +1,40 @@
+{
+  "manifest_version": 1,
+  "model_id": "relationship",
+  "release": "0.1.0-alpha.3",
+  "model_version": "4.2.0-alpha",
+  "prompt_version": "0.1-Alpha.1",
+  "schema_version": "2.0",
+  "package": {
+    "path": "customer.zip",
+    "sha256": "c6cdbdeca8e5127ef0bb2ba965c2c6ef4e5e012f59d2ba799c17d0a7cb799f00"
+  },
+  "requirements": {
+    "python": ">=3.12",
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "capabilities": [
+      "https",
+      "local_files",
+      "python_execution"
+    ]
+  },
+  "authorization": "existing_local_credential; no credentials in this manifest",
+  "prompt": {
+    "path": "prompt.md",
+    "installed_path": "workers-compute/constitution.md",
+    "sha256": "4e52aefdd3978f5bd3ae13e96f1714bde037b21f3e8b9765d100967f3c235590"
+  },
+  "skill": {
+    "path": "skill.md",
+    "installed_path": ".agents/skills/relationship-evaluator/SKILL.md",
+    "sha256": "546bb4c08aa8f72ef17eda1962dc5a0ccb0b5c972edbac9e9931084508789fc8"
+  },
+  "instructions": {
+    "path": "start.md",
+    "installed_path": "workers-compute/customer_release/开始使用.md",
+    "sha256": "84b41f8d17e5a7c326a66338f3ba1cf2327feea4f0049e1bc63af85681f8fe44"
+  }
+}

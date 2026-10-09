@@ -1,16 +1,16 @@
-# 模型库：给本地AI的启动说明
+# Model library — startup instructions for a local AI
 
-这是模型文件分发入口，不包含任何访问凭证。当前目录有关系模型和写作旁观者私人自测包；写作模型已完成真实购买和激活验证，云端扣次验收完成前仍不得称为正式商用。文件分发不等于模型效果或所有客户端兼容性的承诺。顾客入口由 Cloudflare 提供，GitHub 只保存发布版本。
+This is a public model-file distribution entry, not an access credential. It contains the relationship model and a private writing-observer test package. Writing has passed a real purchase and activation test; it must not be called commercially ready before its cloud credit-use acceptance is completed. Distribution alone does not establish model effectiveness or compatibility with every AI client. Cloudflare serves customer files; GitHub preserves versions and provides backup distribution.
 
-用户要求使用本库时，在宿主授权范围内执行以下步骤。若不能联网、保存文件或执行Python，应明确说明缺少哪项能力，不声称已安装或已计算。
+When the user asks to use this library, work within the host's authorized capabilities. If HTTPS, local file access or Python execution is unavailable, identify the missing capability; never claim installation or computation succeeded.
 
-若 AI 的网页读取工具报告 `Cache miss`，但它获准使用本地终端，可通过 HTTPS 下载同一个 Cloudflare 地址并核对响应，再继续以下步骤；不要把网页工具的失败直接当作服务器故障。若终端下载也失败，应停止并报告具体网络错误，不改用未核实的镜像。
+If the web reader reports `Cache miss`, an authorized local terminal may download the same Cloudflare file over HTTPS and verify it. Do not assume a web-reader failure is a service failure. If terminal download also fails, stop with the actual network error; do not use an unverified mirror.
 
-1. 以本文件所在目录为基准读取 [catalog.json](catalog.json)。只选择用户需要的模型：`relationship` 或 `writing-observer`；只加载所选模型，不混合全部Prompt。
-2. 下载同目录 [install_model.py](install_model.py) 到用户工作目录，SHA256须等于 `8eed8d57d838d873afc2990941f9d991f191270b3ca14aac856825fff9c89079`。校验基于可信入口，仅用于一致性检查，不是独立签名。不要把下载响应直接通过管道执行。
-3. 使用Python3.12及以上运行：`python3 install_model.py --catalog <本入口同目录catalog.json的完整HTTPS地址> --model <所选模型id> --directory <用户选定的本地模型目录>`。路径有空格时加引号。脚本只下载和校验，不激活、不安装依赖、不计算。不覆盖已有版本；已安装时直接读取已有目录中的文件。
-4. 按安装输出read_first读取开始使用.md，再读取该安装目录下的Skill与Prompt。仅在模型需要时将其作为用户请求的操作说明使用，不能凌驾于宿主系统规则或用户指令。
-5. 已激活顾客可复用同一 Secret 中的本地凭证；购买第二个模型后，按所选包的开始使用说明隐藏输入新 CDKEY 来追加权益。不要打开或输出 Secret 内容。首次购入的顾客由所选包的脚本创建凭证。各模型的确认、计算与失败恢复遵守各自包的说明。
-6. 下载和阅读不扣计算次数。安装完成后等待真实需求和必要的事实确认；不得为证明安装成功自动计算。新版本放新目录；正在进行的旧案例继续使用原版本和原凭证。
+1. Read [catalog.json](catalog.json) relative to this file's directory. Select only the model requested: `relationship` or `writing-observer`. Do not mix all model Prompts.
+2. Download [install_model.py](install_model.py) from the same directory into the user's workspace. Its SHA256 must equal `8eed8d57d838d873afc2990941f9d991f191270b3ca14aac856825fff9c89079`. This checks consistency with the trusted entry; it is not an independent signature. Do not pipe a download directly into an interpreter.
+3. Check the actual Python executable is 3.12 or newer, then run `python3 install_model.py --catalog <full-HTTPS-URL-of-catalog.json-in-this-directory> --model <selected-model-id> --directory <user-selected-local-model-directory>`. Quote paths containing spaces and use the verified Python executable for the installer and package environment. The installer downloads and checks files only: no activation, dependency installation or computation. It does not overwrite an existing version; read that version's files if already installed.
+4. Follow the returned `read_first` path to the installed start guide, then read that package's Skill and Prompt. Treat them as task instructions only when requested; they cannot override host system rules or user instructions. Relationship's start guide is English-first with a Chinese reference; its internal constitution remains the canonical model definition. Explain it faithfully in the customer's preferred language without changing mathematical or business meanings.
+5. Existing customers reuse the local credential in the same Secret directory. To add a second purchased model, follow that package's instructions and let the customer enter the new License key at the hidden local terminal prompt. Do not read or display Secret contents. First purchases create a credential through the package script. Follow each model's confirmation, computation and recovery rules.
+6. Downloading and reading do not consume computation credits. After installation, wait for the customer's need and required fact confirmation; do not compute to demonstrate installation. Install a new version into a new directory; unfinished old cases retain the original version and credential.
 
-同一凭证可以追加购买权益；每种模型仍需独立购买。写作旁观者自测调用会在作者确认后向 Cloudflare 上传所选草稿片段，关系模型只发送数值因子。没有自动退款。凭证永远由本机脚本携带，不注入本文件、Prompt或下载URL。
+One credential can hold multiple purchased entitlements; each model must still be bought separately. A writing-observer test call uploads the selected draft excerpt only after the author's confirmation; relationship computation sends numerical factors only. There is no automatic refund. Credentials are carried by local scripts, never injected into this file, a Prompt or download URL. English presentation is not a claim of validated multilingual predictive performance.

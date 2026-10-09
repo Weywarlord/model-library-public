@@ -3,11 +3,11 @@
   "models": [
     {
       "id": "relationship",
-      "name": "关系观察 · 风险分析",
-      "description": "整理变化，核对线索，确认后调用关系模型；风险指数并非已验证的现实概率。",
-      "release": "0.1.0-alpha.2",
+      "name": "Relationship Insight — Risk Analysis",
+      "description": "Organize observations, verify details, and explore the model assessment. The risk index is not a validated real-world probability.",
+      "release": "0.1.0-alpha.3",
       "status": "acceptance_candidate",
-      "manifest": "models/relationship/0.1.0-alpha.2/manifest.json"
+      "manifest": "models/relationship/0.1.0-alpha.3/manifest.json"
     },
     {
       "id": "writing-observer",
